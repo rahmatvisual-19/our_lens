@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
+import { OurLensLogo } from './components/OurLensLogo'
 
 // Curated high quality authentic candid event photography
 const IMAGES = {
@@ -231,19 +232,7 @@ export default function App() {
       <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container navbar-container">
           <a href="#" className="nav-brand" aria-label="OurLens Home">
-            <svg
-              className="nav-brand-icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83M16.62 12l-5.74 9.94" />
-            </svg>
-            <span>OurLens</span>
+            <OurLensLogo height={34} color="var(--primary-forest)" textColor="var(--text-ink)" />
           </a>
 
           <nav aria-label="Main Navigation">
@@ -546,7 +535,9 @@ export default function App() {
               {/* Physical Table Card */}
               <div className="qr-card-physical">
                 <div className="washi-tape washi-tape-top" />
-                <div className="qr-card-logo">Our Lens</div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '8px' }}>
+                  <OurLensLogo height={34} color="#7E0C0C" textColor="#232533" />
+                </div>
                 <div className="qr-card-tagline">Scan. Share. Remember.</div>
                 <div className="qr-code-graphic" aria-label="Event QR Code illustration">
                   <svg viewBox="0 0 100 100" width="120" height="120">
@@ -1157,7 +1148,7 @@ export default function App() {
               </div>
 
               <div className="final-brand-mark">
-                <span className="final-brand-name">OurLens</span>
+                <OurLensLogo height={44} color="var(--accent-gold)" textColor="#FFF" />
                 <span className="final-tagline">
                   Capture the moments. Share the memories.
                 </span>
@@ -1174,7 +1165,7 @@ export default function App() {
         <div className="container">
           <div className="footer-content">
             <div>
-              <div className="footer-brand">OurLens</div>
+              <OurLensLogo height={32} color="var(--primary-forest)" textColor="var(--text-ink)" />
               <p style={{ marginTop: '6px' }}>
                 Capture the moments. Share the memories.
               </p>
@@ -1315,8 +1306,8 @@ export default function App() {
 
                 <div className="qr-preview-box">
                   <div className="washi-tape washi-tape-top" />
-                  <div style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', fontWeight: 600 }}>
-                    OUR LENS
+                  <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '6px' }}>
+                    <OurLensLogo height={28} color="#7E0C0C" textColor="#232533" />
                   </div>
                   <div style={{ fontFamily: 'var(--font-hand)', fontSize: '1.3rem', color: 'var(--primary-forest)', margin: '4px 0 16px 0' }}>
                     {newEvent.title}
